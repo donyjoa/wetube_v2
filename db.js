@@ -4,8 +4,7 @@ export const videos = [
     title: "Video awesome",
     description: "This is something i love",
     views: 24,
-    videoFile:
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+    videoFile: "https://www.w3schools.com/html/mov_bbb.mp4",
     creator: {
       id: 123123,
       name: "wow",

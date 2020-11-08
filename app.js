@@ -11,7 +11,7 @@ import { localMiddleWare } from "./middlewares";
 
 const app = express();
 
-app.use(helmet()); //보안
+app.use(helmet({ contentSecurityPolicy: false })); //보안
 app.set("view engine", "pug"); //엔진변경
 app.use(cookieParser());
 app.use(bodyParser.json());
