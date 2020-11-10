@@ -3,6 +3,11 @@ import routes from "./routes";
 export const localMiddleWare = (req, res, next) => {
   res.locals.siteName = "WeTube";
   res.locals.routes = routes;
+  res.locals.user = {
+    // 가짜 유저 데이터
+    isAuthenticated: true,
+    id: 1,
+  };
   next();
 };
 
