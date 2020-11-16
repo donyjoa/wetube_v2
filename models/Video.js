@@ -18,8 +18,18 @@ const VideoSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
 });
 
-const model = mongoose.model("Vidoe", VideoSchema);
+const model = mongoose.model("Video", VideoSchema);
 
 export default model;
+
+// 무언가 옵션이 있어야 한다면 여러줄이 되지만
+// 그렇지 않다면 그냥 한줄이면 충분하다.
+// ex: description
