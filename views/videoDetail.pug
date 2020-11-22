@@ -1,4 +1,11 @@
 extends layouts/main.pug
 
 block content
-  p video detail
+  .video__player
+    video(src=`/${video.fileUrl}`) 
+    //- ` / ` 를 붙이는 이유는 파일이 서버에 있기 떄문이다.
+  .video__info
+    a(href=routes.editVideo) Edit Video
+    h5.video__title=video.title
+    span.video__views=video.views
+    p.video__description=video.description

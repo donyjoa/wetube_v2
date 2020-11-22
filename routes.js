@@ -17,6 +17,7 @@ const UPLOAD = "/upload";
 const VIDEO_DETAIL = "/:id";
 const EDIT_VIDEO = "/:id/edit";
 const DELETE_VIDEO = ":id/delete";
+// 어떤 데이터를 가지고 있다는 것을 표현할려면 :를 붙일 것
 
 const routes = {
   home: HOME,
