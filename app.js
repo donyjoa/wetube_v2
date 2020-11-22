@@ -13,6 +13,8 @@ const app = express();
 
 app.use(helmet({ contentSecurityPolicy: false })); //보안
 app.set("view engine", "pug"); //엔진변경
+app.use("/uploads", express.static("uploads")); //누군가 업로드로 간다면 스테틱, 다이렉토리에서 파일을 보내주는 미들웨어
+// 이제 누군가 업로드스 폴더안에 있는 파일로 간다.
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
